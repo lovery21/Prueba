@@ -66,9 +66,21 @@
             0% { transform: translateY(0) scale(1); opacity: 1; }
             100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
         }
+
+        .image-cars {
+            display: flex;
+            max-width: 311px;
+        }  
+
+        .image-cars>img{
+            width: 311px;
+        }
     </style>
 </head>
 <body>
+    <div id="Cars" style="opacity: 0;transition: all 300ms;" class="image-cars">
+        <img src="IMG\Cars.png" alt="Cars">
+    </div>
     <div class="card">
         <div class="heart">🌻🌻🌻🌻</div>
         <h1>Feliz San Valentín Osita🤍🐻</h1>
@@ -81,6 +93,9 @@
         <p id="otroMensaje" class="hidden">Tienes una forma de ser unica que está llena de sorpresas y cada dia me sorprendes mas FELIZ DIA ESPERO TE LA HAYAS PASADO MUY BONITO HOY🦦🤍🦦 </p>
         <div class="floating-hearts" id="hearts-container"></div>
     </div>
+    <div id="CARS2"style="opacity: 0;transition: all 300ms;" class="image-cars">
+        <img src="IMG\CARS2.png" alt="CARS2">
+    </div>
     <script>
         function mostrarMensaje() {
             document.getElementById("mensaje").classList.remove("hidden");
@@ -92,6 +107,9 @@
         }
         function cambiarFondo() {
             document.body.style.background = "linear-gradient(to right, #6ca571, #7dbdc9)";
+            document.getElementById("Cars").style.opacity=1
+            document.getElementById("CARS2").style.opacity=1
+
         }
         function lanzarCorazones() {
             const container = document.getElementById("hearts-container");
